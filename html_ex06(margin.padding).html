@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding_margin</title>
+    <style>
+        /* margin - 요소 사이 간격 : 여백, 차이, 마진 남긴다.
+        padding - 내부 여백 간격 : 충전재, 패딩점퍼. 패드. */
+
+        /*
+        margin-top : 위
+        margin-bottom: 아래
+        margin-left: 왼쪽
+        margin-right : 오른쪽
+        margin :4방향 다 주기
+        margin : 1px 1px 1px 1px;   <--- 마진 적용 순서 : 12시부터 시계 방향. == 위 오른쪽 아래 왼쪽
+        */
+        div{
+            width:100px;
+            height:100px;
+            display:block;
+        }
+        #my_div1{
+            background-color: red;
+            padding-top:27px;  /*위 패딩을 주면 100px에서 150px로  세로 길이가 늘어남. div 내부 여백이 늘어나기 때문, 좌,우,아래 같은 동작.*/
+            box-sizing: border-box; /*패딩을 줬을때 내부 요소들이 밀리는 것을 방지하기 위해 박스 사이즈를 계산하는 속성으로, 경계선이나 패딩을 박스 내부 크기에 포함시킨다.*/
+            border:10px solid black;
+            border-radius:10px; /*모서리 각도 깎기 수치가 커질수록 더 뭉툭해짐 -> 100%는 원이 됨.*/
+            text-align:center; /* 글자 배치*/
+        }
+        #my_div2{
+            background-color: green;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "my_div1">
+        div1
+    </div>
+    <div id = "my_div2">
+        div2
+    </div>
+</body>
+</html>
