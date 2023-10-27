@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background-color: red; 
+        }
+        /* #two{ -----------------------------static은 고정이여서 left,top 값을 줘도 위치가 고정이다. 모든 요소의 기본 position default값은 static.
+            background-color: blue;
+            position:static;
+            left:50px;
+        } */
+        /* #two{ -----------------------------relative는 자기 자신 위치에서 상대적으로 이동. 즉, left: 50px;을 주었을 때 우측으로  50px만큼 이동한다.
+            background-color: blue;
+            position:relative;
+            left:50px;
+        } */
+        #two{
+            background-color: blue;
+            position:static;
+            left:50px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        가상 요소
+        ::before, ::after
+        ::에 가상요소 붙여서 씀
+        태그 사용을 줄 일 수 있음.
+        반복되는 부분에 가상요소를 사용하면 태그양을 줄일 수 있어 가독성, 유지보수에 좋다.
+    -->
+    <div class = "box" id = "one">
+        박스1
+    </div>
+    <div class = "box" id = "two">
+        박스2
+    </div>
+    <div class = "box" id = "three">
+        박스3
+    </div>
+    <div class = "box" id = "four">
+        박스4
+    </div>
+
+</body>
+</html>
